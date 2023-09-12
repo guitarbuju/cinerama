@@ -1,0 +1,15 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie {
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeInUp 3s ease-in-out forwards; /* Apply the fadeInUp animation */
+}
