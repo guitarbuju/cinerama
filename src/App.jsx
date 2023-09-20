@@ -6,6 +6,7 @@ import Pagina2 from "./pages/Pagina2";
 import { MovieProvider } from "../Context";
 import Pagina3 from "./pages/Pagina3";
 import Welcome from "./pages/Welcome";
+import About from "./pages/About";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="pag2" element={<Pagina2 />} />
             <Route path="pag3" element={<Pagina3 />} />
             <Route path="pag" element={<Pagina />} />
+            <Route path="about" element={<About/>} />
           </Route>
         </Routes>
       </MovieProvider>
