@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom'
 
 
-
-const Header = ({ choose }) => {
+const Header = () => {
   const styles = {
     fontFamily: "Kaushan Script",
     fontSize: "60px",
@@ -22,10 +22,21 @@ const Header = ({ choose }) => {
     <div>
       <header className={NavClass.nav1}>
         <div className="flex justify-start gap-1">
-         
+        <div className="flex justify-start gap-1">
+          <img src='' className="w-10 ml-5 mb-2" />
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
+            cinerama
+          </Link>
+        </div>
+        <div className="flex justify-center gap-4 text-gray-300">
+          <Link to='/about'><button className="ghost">About</button></Link>
+          <Link to='/contact'><button className="ghost">Contact</button></Link>
+          <a>Locations</a>
+          <a>Links</a>
+        </div>
         </div>
         <div className="flex flex-col mr-2">
-         <h1 style={styles}>Welcome Back to the Movies...</h1>
+        <Link to='/'><h1 style={styles}>Welcome Back to the Movies...</h1></Link> 
         
             
           

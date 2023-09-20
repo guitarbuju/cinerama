@@ -9,7 +9,7 @@ const Welcome = () => {
 <header>
 <div className="ml-20 flex justify-start gap-4 text-gray-300">
           <Link to='/about'>About</Link>
-          <a>Contact</a>
+          <Link to='/contact'>Contact</Link>
           <a>Locations</a>
           <a>Links</a>
         </div>
@@ -35,14 +35,14 @@ const Welcome = () => {
       >
         <div className="flex justify-center align-middle">
           <div className="flex flex-col gap-1 mt-8">
-         
+         <Link to ='pag'>
               <button
                 className="bg-secondary w-40 h-8 btn-xs text-xs text-white ml-16"
                 style={{ boxShadow: "1px 1px 1px black" }}
               >
                 NOW SHOWING!!
               </button>
-           
+           </Link>
 
             <div className="flex ml-5 ">
               <img src={camera} className="w-10 ml-5 mb-2" />

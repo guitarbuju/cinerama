@@ -35,10 +35,16 @@ const Header = ({ choose }) => {
           </Link>
         </div>
         <div className="flex justify-center gap-4 text-gray-300">
-          <Link to='/about'>About</Link>
-          <a>Contact</a>
+          <Link to='/about'><button className="ghost">About</button></Link>
+          <Link to='/contact'><button className="ghost">Contact</button></Link>
           <a>Locations</a>
-          <a>Links</a>
+          <Link to='/pag' className="btn btn-secondary btn-xs "><motion.button
+            initial="hidden"
+              animate="visible"
+              variants={blinkVariants}
+              transition={{ duration: 1, repeat: Infinity }}
+          
+          >NOW SHOWING!!</motion.button></Link>
         </div>
         <div className="flex flex-col">
            <h1 style={styles}>Welcome Back to the Movies...</h1> 

@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div className="mt-10">
       <Header />
-      <div className={`hero ${styles.movie}`}>
-        <div className="hero-content flex-col lg:flex-row">
+      <div >
+        <div className={`hero-content flex-col lg:flex-row ${styles.movie}`}>
           <img
             src="https://m.media-amazon.com/images/I/91jrKX9xjQL.jpg"
             className="max-w-sm rounded-lg shadow-2xl opacity-60 "

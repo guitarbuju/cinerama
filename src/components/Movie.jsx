@@ -2,6 +2,7 @@
 import watch from '../assets/watch.png'
 import Genres from './Genres'
 import ticket from '../assets/icons8-ticket-48.png'
+import { motion } from 'framer-motion'
 
 
 const Movie = ({movie}) => {
@@ -12,13 +13,18 @@ const Movie = ({movie}) => {
           className=" flex rounded-lg p-2"
          
         >
-          <div className="rounded">
+          <motion.div className="rounded"
+            initial={{ opacity: 0, scale: 0.1 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            // exit={{ opacity: 0, scale: 0.1 }}
+            transition={{ duration: 1, delay:0.5 }}
+          >
             <img
               className="w-40 h-60"
               src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
               alt={movie.original_title}
             />
-          </div>
+          </motion.div>
           <div className="flex flex-col p-2 justify-center items-center ">
             <h1 className=" transform -translate-y-1/2 text-white font-sans text-lg">
               {movie.title}
