@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import camera from "../assets/icons8-video-64.png";
 import { motion } from "framer-motion";
 
-
 const Header = ({ choose }) => {
   const styles = {
     fontFamily: "Kaushan Script",
@@ -26,8 +25,6 @@ const Header = ({ choose }) => {
     visible: { opacity: 1 },
   };
 
-
-
   return (
     <div>
       <header className={choose ? NavClass.nav1 : NavClass.nav2}>
@@ -37,9 +34,17 @@ const Header = ({ choose }) => {
             cinerama
           </Link>
         </div>
+        <div className="flex justify-center gap-4 text-gray-300">
+          <Link to='/about'>About</Link>
+          <a>Contact</a>
+          <a>Locations</a>
+          <a>Links</a>
+        </div>
         <div className="flex flex-col">
-         <h1 style={styles}>Welcome Back to the Movies...</h1>
-         {choose &&  <motion.h5
+           <h1 style={styles}>Welcome Back to the Movies...</h1> 
+         
+          {choose && (
+            <motion.h5
               style={styles2}
               className="-mt-10 z-10"
               initial="hidden"
@@ -48,10 +53,8 @@ const Header = ({ choose }) => {
               transition={{ duration: 0.5, repeat: Infinity }}
             >
               1.Choose your seats NOW...
-            </motion.h5>}
-        
-            
-          
+            </motion.h5>
+          )}
         </div>
       </header>
     </div>
