@@ -1,12 +1,12 @@
 import Header from "../components/Header";
-import { Link } from 'react-router-dom'
-import styles from './movie.module.css'
+import { Link } from "react-router-dom";
+import styles from "./movie.module.css";
 
 const About = () => {
   return (
     <div className="mt-10">
       <Header />
-      <div >
+      <div>
         <div className={`hero-content flex-col lg:flex-row ${styles.movie}`}>
           <img
             src="https://m.media-amazon.com/images/I/91jrKX9xjQL.jpg"
@@ -132,14 +132,24 @@ const About = () => {
           />
         </div>
       </div>
-      <Link to="/pag">
-              <button
-                className="bg-secondary w-40 h-8 btn-xs text-xs text-white ml-12"
-                style={{ boxShadow: "1px 1px 1px black" }}
-              >
-                NOW SHOWING!!
-              </button>
-            </Link>
+      <section className="py-6 text-gray-200 mt-20">
+        <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
+          <h1 className="text-6xl font-semibold leadi text-center lg:text-left">
+            Come take a Look...?
+          </h1>
+          <Link to="/pag">
+            <button
+              type="button"
+              className="relative px-8 py-4 mr-20 overflow-hidden font-semibold rounded bg-secondary text-gray-200 shadow-lg"
+            >
+              NOW SHOWING!!!
+              <span className="absolute top-0 right-0 px-5 py-1 text-xs tracki text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 bg-warning shadow-lg">
+                Now
+              </span>
+            </button>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };
