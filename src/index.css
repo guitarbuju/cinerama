@@ -18,6 +18,11 @@ body {
   
   
 }
+.page-background {
+ 
+  background: black;
+}
+
 
 
 @tailwind base;
