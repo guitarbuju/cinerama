@@ -46,7 +46,7 @@ const Pagina = () => {
   return (
     <div className="mt-10" >
       <Header/>
-      <div className={`grid grid-cols-2 gap-4 mt-10 ${styles.movie}`}>
+      <div className={`sm:grid grid-cols-3 gap-4 mt-10 ${styles.movie}`}>
         {movieData.map((movie, index) => (
           <motion.div
             key={index}
@@ -60,11 +60,13 @@ const Pagina = () => {
           
             <Movie movie={movie} />
           
-            
-            <SelectMovieButton
+            <div className="mb-8 h-10">
+              <SelectMovieButton 
               handleGetTicketsClick={handleGetTicketsClick}
               movie={movie}
             />
+            </div>
+            
           </motion.div>
         ))}
       </div>
