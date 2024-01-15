@@ -1,3 +1,4 @@
 .welcome-background {
     background-image: url('../assets/poster.jpeg');
+    background-size: cover;
 }
