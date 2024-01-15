@@ -36,12 +36,12 @@ const Pagina2 = () => {
     <div>
      
       <Header choose={choose} />
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 mt-6">
       {showFinalModal && <Spinner/>}
-        <div className="md:col-span-1">
+        <div className="sm:col-span-1">
           <Movie movie={movie} />
         </div>
-        <div className="md:col-span-1 md:row-span-2 ml-20">
+        <div className="flex-col items-center justify-center">
           <ShowRoom
           
             handleSelectedSeats={handleSelectedSeats}

@@ -16,7 +16,7 @@ const Drawer = ({ selectedSeats }) => {
 
 
   return (
-    <div className="drawer drawer-end z-50">
+    <div className="drawer drawer-end z-50 h-full">
     
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">{/* Page content here */}</div>
@@ -47,7 +47,7 @@ const Drawer = ({ selectedSeats }) => {
             )}
 
             {purchasePop && TotalTickets && (
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 -mt-10">
                 <TotalDue
                   TotalTickets={TotalTickets}
                   purchasePop={purchasePop}

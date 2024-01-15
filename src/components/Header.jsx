@@ -9,7 +9,6 @@ const Header = ({ choose }) => {
   };
   const styles2 = {
     fontFamily: "Kaushan Script",
-    fontSize: "50px",
     color: "white",
     textShadow: "1px 1px 1px gray, 3px 3px 3px black",
   };
@@ -24,7 +23,7 @@ const Header = ({ choose }) => {
   return (
     <div>
       <header className= "flex-col navbar sm:w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between">
-        <div className="flex flex-col gap-1 sm:flex">
+        <div className="flex flex-col gap-1 sm:flex justify-center align-middle">
           <div className="flex justify-center align-middle">
             <img src={camera} className="w-10 ml-5 mb-2" />
             <Link to="/" className="btn btn-ghost normal-case text-xl">
@@ -52,7 +51,7 @@ const Header = ({ choose }) => {
             </motion.button>
           </Link>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col sm:flex-row">
           <h1 className="text-2xl sm:text-5xl  sm:w-full" style={styles}>
             Welcome Back to the Movies...
           </h1>
@@ -60,7 +59,7 @@ const Header = ({ choose }) => {
           {choose && (
             <motion.h5
               style={styles2}
-              className="-mt-10 z-10"
+              className=" z-10 sm:w-full text-2xl sm:text-5xl"
               initial="hidden"
               animate="visible"
               variants={blinkVariants}

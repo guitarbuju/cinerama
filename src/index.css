@@ -8,7 +8,7 @@ body {
   padding: 4rem;
   text-align: center;
   font-family:'Roboto', sans-serif;
-  min-height: 300vh;
+  /* min-height: 300vh; */
   width:100vw;
   /* background-color: #7a7adb; */
   background-color: #170e13;
@@ -19,7 +19,7 @@ body {
 .page-background {
  
   background: black;
-  
+  min-height: 100vh; 
 }
 
 
