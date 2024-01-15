@@ -6,8 +6,9 @@ import Pagina2 from "./pages/Pagina2";
 import { MovieProvider } from "../Context";
 import Pagina3 from "./pages/Pagina3";
 import Welcome from "./pages/Welcome";
-import About from "./pages/About";
+// import About from "./pages/About";
 import Contact from "./pages/Contact";
+import AboutNew from "./pages/AboutNew";
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
             <Route path="pag2" element={<Pagina2 />} />
             <Route path="pag3" element={<Pagina3 />} />
             <Route path="pag" element={<Pagina />} />
-            <Route path="about" element={<About/>} />
+            <Route path="about" element={<AboutNew/>} />
             <Route path="contact" element={<Contact/>} />
           </Route>
         </Routes>

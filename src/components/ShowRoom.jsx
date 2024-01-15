@@ -25,11 +25,11 @@ const ShowRoom = ({ handleSelectedSeats, selectedSeats}) => {
      console.log("hey",selectedSeats);
 
   return (
-    <div className=" grid grid-cols-10 grid-rows-5 w-7/12">
+    <div className=" grid grid-cols-10 grid-rows-5 sm:w-7/12">
       {resultArray.map((seat, id) => (
         <div
           key={id}
-          className="flex justify-center align-middle flex-row rounded"
+          className="flex justify-center align-middle flex-row rounded "
         >
           <motion.button
             className="flex flex-row"
@@ -44,7 +44,7 @@ const ShowRoom = ({ handleSelectedSeats, selectedSeats}) => {
            >
               {seat}
             </span>
-            <img src={!selectedSeats.includes(seat) ? ShowSeat : camera} className="w-6 rounded-md mb-1" />
+            <img src={!selectedSeats.includes(seat) ? ShowSeat : camera} className="w-10 sm:w-40 rounded-md mb-1" />
           </motion.button>
         </div>
       ))}

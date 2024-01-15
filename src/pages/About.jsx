@@ -4,19 +4,19 @@ import styles from "./movie.module.css";
 
 const About = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 max-w-sm">
       <Header />
-      <div>
-        <div className={`hero-content flex-col lg:flex-row ${styles.movie}`}>
+      <div >
+        <div className={`hero-content w-3/4 flex-col sm:flex-row sm:ml-20 ${styles.movie}`}>
           <img
             src="https://m.media-amazon.com/images/I/91jrKX9xjQL.jpg"
-            className="max-w-sm rounded-lg shadow-2xl opacity-60 "
+            className="sm:w-3/4 w-1/2 rounded-lg shadow-2xl opacity-60 "
           />
-          <div>
-            <h1 className="text-8xl font-bold" style={{ color: "#e0d2fe " }}>
+          <div className="ml-20 sm:ml-20">
+            <h1 className="text-5xl sm:text-6xl font-bold w-3/4 sm:w-full" style={{ color: "#e0d2fe " }}>
               Where Vintage Meets Visionary
             </h1>
-            <p className="py-6 text-left text-gray-300 w-3/4 ml-32">
+            <p className="py-6 text-left text-gray-300 w-3/4 sm:ml-14 sm:w-full">
               Welcome to Cinerama, where the art of cinema is reimagined as a
               timeless experience. Nestled at the heart of our city, Cinerama is
               more than just a movie theater; it&apos;s a destination that
@@ -28,11 +28,12 @@ const About = () => {
       </div>
       <div className="hero bg-transparent mt-32">
         <div className="hero-content flex-col lg:flex-row">
-          <div>
-            <h1 className="text-8xl font-bold" style={{ color: "#e0d2fe " }}>
-              Elegance in Every Detail
+          <div className="ml-20 sm:ml-20">
+            <h1 className="text-5xl sm:text-8xl font-bold w-3/4 sm:w-full " style={{ color: "#e0d2fe " }}>
+              Elegance  
             </h1>
-            <p className="py-6 text-left text-gray-300 w-3/4 ml-32">
+            <h1 className="text-5xl sm:text-8xl font-bold w-3/4 sm:w-full " style={{ color: "#e0d2fe " }}>in Every Detail</h1>
+            <p className="py-6 text-left text-gray-300 w-52 sm:w-3/4 " >
               Step through our doors, and you&apos;ll find yourself immersed in
               a world of vintage elegance. Our theater is a tribute to the
               golden age of cinema, where every detail has been meticulously
@@ -45,11 +46,11 @@ const About = () => {
           <img
             // src="https://filmartgallery.com/cdn/shop/products/The-Big-Blue-Le-Grand-Bleu-Vintage-Movie-Poster-Original-French-Mini-16x23.jpg?v=1666922460"
             src="https://do84cgvgcm805.cloudfront.net/article/671/1200/b8672b2ef8f86f75e291f935240bb4ca16cf72c1ade3ce755bb71c19c1889b58.jpg"
-            className="max-w-lg rounded-lg shadow-2xl opacity-60 "
+            className="w-3/4 sm:w-1/2 rounded-lg shadow-2xl opacity-60 "
           />
         </div>
       </div>
-      <div className="relative w-full flex gap-4 py-6   opacity-60 mt-20 -ml-4">
+      <div className="sm:grid sm:grid-cols-4 relative w-full gap-4  opacity-60 mt-20 ">
         <img
           className="h-48 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
           src="https://archello.s3.eu-central-1.amazonaws.com/images/2020/10/21/metaphor-interior-architecture-cin--polis--modern-sophisticated-movie-theater-cinemas-archello.1603261330.2612.jpg"
@@ -73,21 +74,16 @@ const About = () => {
       </div>
       <section className=" dark:text-gray-100 bg-transparent">
         <div className=" flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-          <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-3/4 xl:h-112 2xl:h-128  opacity-60 ml-20">
+          <div className="flex items-center justify-center p-6 mt-8  opacity-60  ">
             <img
               src="https://35mm.es/wp-content/uploads/2021/06/peliculas-de-romance.jpg.webp"
               alt=""
-              className="object-contain w-full bg-transparent border-none h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 card"
+              className="w-full"
             />
           </div>
-          <div className="flex flex-col justify-center mr-72 p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-            {/* <h1 className=" font-bold sm:text-7xl dark:text-gray-800">
-              Creating
-              <span className="text-white">unforgettable</span>
-              <br />
-              <span>moments</span>
-            </h1> */}
-            <h1 className="text-7xl font-bold" style={{ color: "#e0d2fe " }}>
+          <div className="flex flex-col justify-center sm: p-6 text-center rounded-sm ">
+           
+            <h1 className="text-5xl sm:text-6xl font-bold " style={{ color: "#e0d2fe " }}>
               Creating Unforgettable Moments
             </h1>
             <p className=" py-6 text-gray-300 mt-6 mb-8 text-lg sm:mb-12">
@@ -101,24 +97,24 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="hero bg-transparent -mt-24">
-        <div className="hero-content flex-col lg:flex-row">
-          <div>
-            <div className="flex">
-              <span className="text-5xl font-bold sm:text-6xl ml-40">The</span>
+      <div className="hero bg-transparent ">
+        <div className="hero-content flex-col lg:flex-row ">
+          <div className="ml-20">
+            <div className="w-2/4 sm:flex">
+              <span className="text-5xl  font-bold sm:text-6xl ">The</span>
 
               <div className=" flex flex-col">
                 <span
-                  className=" text-8xl -mt-8 mr-10"
+                  className="text-5xl sm:text-8xl -mt-8 mr-10"
                   style={{ color: "#e0d2fe " }}
                 >
                   cinerama
                 </span>
-                <span className="text-8xl -mt-4">experience</span>
+                <span className="text-5xl sm:text-8xl  -mt-4">experience</span>
               </div>
             </div>
 
-            <p className="py-6 text-left text-gray-300 w-3/4 ml-32">
+            <p className="py-6  text-gray-300  text-lg">
               We invite you to rediscover the joy of going to the movies at
               Cinerama. Immerse yourself in an era of vintage flair and
               visionary technology, where cinema is an art form, and every
@@ -128,13 +124,13 @@ const About = () => {
           </div>
           <img
             src="https://i.pinimg.com/736x/19/40/96/194096bd7bea117b51ad7fb0c907e553.jpg"
-            className="max-w-sm rounded-lg shadow-2xl opacity-60 card"
+            className="sm:w-2/4 rounded-lg shadow-2xl opacity-60 card ml-20"
           />
         </div>
       </div>
       <section className="py-6 text-gray-200 mt-20">
         <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
-          <h1 className="text-6xl font-semibold leadi text-center lg:text-left">
+          <h1 className="text-5xl sm:text-6xl font-semibold leadi text-center sm:text-left">
             Come take a Look...?
           </h1>
           <Link to="/pag">
