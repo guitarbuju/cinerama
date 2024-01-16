@@ -37,24 +37,24 @@ const Drawer = ({ selectedSeats }) => {
                 ))}
             </div>
             <TimeShow />
-            {!purchasePop && (
+          
               <button
                 className=" mt-4 btn-xs  ml-10 w-60 mb-8"
                 onClick={() => window.my_modal_1.showModal()}
               >
                 <img src={popcorn3} />
               </button>
-            )}
+            
 
-            {purchasePop && TotalTickets && (
-              <div className="flex flex-col gap-1 -mt-10">
+            
+              <div className="flex flex-col gap-1 ">
                 <TotalDue
                   TotalTickets={TotalTickets}
                   purchasePop={purchasePop}
                 />
                 
               </div>
-            )}
+            
           </div>
         </ul>
       </div>
