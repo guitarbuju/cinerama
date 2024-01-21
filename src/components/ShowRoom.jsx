@@ -25,7 +25,7 @@ const ShowRoom = ({ handleSelectedSeats, selectedSeats}) => {
      console.log("hey",selectedSeats);
 
   return (
-    <div className=" grid grid-cols-10 grid-rows-5 sm:w-7/12">
+    <div className=" grid grid-cols-10 grid-rows-5 md:w-7/12">
       {resultArray.map((seat, id) => (
         <div
           key={id}

@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   const styles = {
     fontFamily: "Kaushan Script",
-    fontSize: "60px",
-    textShadow:'3px 3px 3px 0 white'
+    textShadow:'3px 3px 3px 0 white',
   };
 
 
@@ -15,7 +14,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="navbar w-3/4 sm:w-full -mt-20 text-primary-content rounded-lg z-50 flex justify-between">
+      <header className="navbar w-3/4 sm:w-full -mt-30 text-primary-content rounded-lg z-50 flex justify-between">
         <div className="flex justify-start gap-1">
         <div className="flex justify-start gap-1">
           <img src='' className="w-10 ml-5 mb-2" />
@@ -30,8 +29,8 @@ const Header = () => {
           <a>Links</a>
         </div>
         </div>
-        <div className="flex flex-col mr-2 w-full">
-        <Link to='/'><h1 style={styles}>Welcome Back to the Movies...</h1></Link> 
+        <div className="flex flex-col mr-2 w-full ">
+        <Link to='/'><h1 style={styles} >Welcome Back to the Movies...</h1></Link> 
         
             
           

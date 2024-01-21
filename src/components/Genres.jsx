@@ -17,8 +17,8 @@ const Genres = ({genres}) => {
       
 
   return (
-    <div className="max-w-xs text-warning font-sans text-xs grid grid-cols-4 gap-y-px grid-row-2 mt-1 mb-1">
-        {genres.map((id,index )=> <span className='inline-block p-1' key={index}>{genreIdMap[id]}</span>)}
+    <div className="max-w-sm text-warning font-sans text-xs grid grid-cols-3  grid-row-2 mt-1 mb-1">
+        {genres.map((id,index )=> <span className=' p-2 ' key={index}>{genreIdMap[id]}</span>)}
     </div>
   )
 }

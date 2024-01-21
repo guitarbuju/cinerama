@@ -22,7 +22,7 @@ const Header = ({ choose }) => {
 
   return (
     <div>
-      <header className= "flex-col navbar sm:w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between">
+      <header className= "-mt-10 flex-col navbar sm:w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between">
         <div className="flex flex-col gap-1 sm:flex justify-center align-middle">
           <div className="flex justify-center align-middle">
             <img src={camera} className="w-10 ml-5 mb-2" />
@@ -52,14 +52,14 @@ const Header = ({ choose }) => {
           </Link>
         </div>
         <div className="flex flex-col sm:flex-row">
-          <h1 className="text-2xl sm:text-5xl  sm:w-full" style={styles}>
+          <h1 className="text-2xl sm:w-full" style={styles}>
             Welcome Back to the Movies...
           </h1>
 
           {choose && (
             <motion.h5
               style={styles2}
-              className=" z-10 sm:w-full text-2xl sm:text-5xl"
+              className=" z-10 sm:w-full text-2xl"
               initial="hidden"
               animate="visible"
               variants={blinkVariants}
