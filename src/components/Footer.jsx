@@ -6,9 +6,9 @@ const Footer = () => {
     <div>
       <footer className="px-4 py-8 text-gray-200">
         <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
-          <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">
+          <div className="flex flex-row ">
             <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full"></div>
-            <ul className="flex flex-wrap items-center space-x-4 sm:space-x-8 ml-96">
+            <ul className="flex flex-wrap justify-center align-middle gap-4">
               <li className="flex mr-20">
                 <img src={camera} className="w-10 ml-5 mb-2 hidden sm:block" />
                 <Link to="/" className="btn btn-ghost normal-case text-xl hidden sm:block">

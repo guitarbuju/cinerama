@@ -19,23 +19,23 @@ const Movie = ({ movie }) => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <img
-            className="w-60 h-80 "
+            className="w-60 h-80 sm:w-60 sm:h-60"
             src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
             alt={movie.original_title}
           />
         </motion.div>
         <div className="sm:flex sm:flex-col p-2 justify-center items-center mt-2">
-          <h1 className=" transform -translate-y-1/2 text-white font-sans text-lg">
+          <h1 className=" text-white font-sans text-lg sm:text-sm">
             {movie.title}
           </h1>
           <div className="overflow-hidden -mt-4">
-            <p className=" text-white text-sm text-left p-5 w-80 h-40 justify-center align-middle antialiased ">
+            <p className=" text-white text-sm text-left p-3 w-80  h-40 sm:w-44 md:w-52 lg:w-60 sm:text-xs justify-center align-middle antialiased ">
               {movie.overview}
             </p>
           </div>
 
           <div className="flex flex-col ">
-            <Genres genres={movie.genre_ids} />
+            <Genres genres={movie.genre_ids} className="text-xs"/>
             <div className="w-68 flex justify-center align-middle ">
               {" "}
               <div className="flex justify-center align-middle sm:flex-col gap-1 ">
