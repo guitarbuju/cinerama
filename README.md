@@ -6,5 +6,3 @@ This site is posted at https://theamazingcinerama.netlify.app/ and can be cloned
 If you are interested type npm run dev to view itin a local setup
 
 ![Cinerama pic](https://media.licdn.com/dms/image/D4D2DAQGv9p584XSNEQ/profile-treasury-image-shrink_800_800/0/1695292194082?e=1707170400&v=beta&t=KXGDr1Q64k96FqYAXFbAC6cm3HbPmMj9BUXxjPeu3M0)
-Format: ![pic](https://media.licdn.com/dms/image/D4D2DAQGv9p584XSNEQ/profile-treasury-image-shrink_800_800/0/1695292194082?e=1707170400&v=beta&t=KXGDr1Q64k96FqYAXFbAC6cm3HbPmMj9BUXxjPeu3M0)
-
