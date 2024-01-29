@@ -1,8 +1,6 @@
-# React + Vite
+Cinerama is your ultimate destination for serious moviegoers. This page offers a seamless experience where you can not only purchase movie tickets but also customize your popcorn combos, all in one place.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The idea for this project is to build a sober web site for serious moviegoers who desire the full classic experience of a vintage/modern movie theater, easy to use and atractive at the same time.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This site is posted at https://theamazingcinerama.netlify.app/ and can be cloned from this repository 
+If you are interested type npm run dev to view itin a local setup
