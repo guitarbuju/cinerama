@@ -47,7 +47,7 @@ const Header = ({ choose }) => {
               variants={blinkVariants}
               transition={{ duration: 1, repeat: Infinity }}
             >
-              NOW SHOWING!!
+              OUR BILLBOARD!!
             </motion.button>
           </Link>
         </div>

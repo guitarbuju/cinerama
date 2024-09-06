@@ -1,28 +1,53 @@
 /* eslint-disable react/prop-types */
 
-
 import { useMovieContext } from "../../Context";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Movie from "../components/Movie";
 import SelectMovieButton from "../components/SelectMovieButton";
 import { motion } from "framer-motion";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
-import styles from './movie.module.css'
+import styles from "./movie.module.css";
+import Pager from "../components/Pager";
+import MovieListButtons from "../components/MovieListButtons";
 
 const Pagina = () => {
   const [movieData, setMovieData] = useState([]);
+  const [length, setlength] = useState("");
+  const [actualPage, setActualPage] = useState(1);
+  const [movieList, setMovieList ]=useState('now_playing');
+
+  console.log(length);
+  console.log(actualPage);
+
+  const nextPage = () => {
+    if (actualPage >= 1 && actualPage <= length) {
+      setActualPage(actualPage + 1);
+    }
+    if (actualPage < 1) {
+      setActualPage(1);
+    }
+  };
+  const prevPage = () => {
+    if (actualPage > 1 && actualPage <= length) {
+      setActualPage(actualPage - 1);
+    }
+    if (actualPage < 1) {
+      setActualPage(1);
+    }
+  };
 
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     const cargarPeliculas = async () => {
       try {
         const respuesta = await axios.get(
-          "https://api.themoviedb.org/3/movie/popular?api_key=7c93a29133df64c786e0131de31c666c&language=esp-MX&page=1"
+          `https://api.themoviedb.org/3/movie/${movieList}?api_key=7c93a29133df64c786e0131de31c666c&language=esp-MX&page=${actualPage}`
         );
         const results = respuesta.data.results;
+        setlength(results.length);
         console.log(results);
         setMovieData(results);
       } catch (error) {
@@ -31,7 +56,7 @@ const Pagina = () => {
     };
 
     cargarPeliculas();
-  }, []);
+  }, [actualPage, movieList]);
 
   const { setSelectedMovie, selectedMovie } = useMovieContext();
 
@@ -41,12 +66,13 @@ const Pagina = () => {
   };
   console.log(selectedMovie);
 
-  
-  
   return (
-    <div className="mt-10" >
-      <Header/>
-      <div className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}>
+    <div className="mt-10 ">
+      <Header />
+    <MovieListButtons setMovieList={ setMovieList }/>
+      <div
+        className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}
+      >
         {movieData.map((movie, index) => (
           <motion.div
             key={index}
@@ -57,19 +83,24 @@ const Pagina = () => {
               boxShadow: "17px 8px 20px -4px rgba(0,0,0,0.8)",
             }}
           >
-          
             <Movie movie={movie} />
-          
+
             <div className="mb-8 h-10">
-              <SelectMovieButton 
-              handleGetTicketsClick={handleGetTicketsClick}
-              movie={movie}
-            />
+              <SelectMovieButton
+                handleGetTicketsClick={handleGetTicketsClick}
+                movie={movie}
+              />
             </div>
-            
           </motion.div>
         ))}
       </div>
+      <Pager
+        actualPage={actualPage}
+        setActualPage={setActualPage}
+        prevPage={prevPage}
+        nextPage={nextPage}
+        length={length}
+      />
     </div>
   );
 };
