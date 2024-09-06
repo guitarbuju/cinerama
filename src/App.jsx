@@ -9,6 +9,7 @@ import Welcome from "./pages/Welcome";
 // import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AboutNew from "./pages/AboutNew";
+import Search from "./pages/Search";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="pag2" element={<Pagina2 />} />
             <Route path="pag3" element={<Pagina3 />} />
             <Route path="pag" element={<Pagina />} />
+            <Route path="search" element={<Search />} />
             <Route path="about" element={<AboutNew/>} />
             <Route path="contact" element={<Contact/>} />
           </Route>

@@ -37,6 +37,9 @@ const Header = ({ choose }) => {
             <Link to="/contact">
               <button className="ghost">Contact</button>
             </Link>
+            <Link to="/search">
+              <button className="ghost">Search</button>
+            </Link>
             <a>Locations</a>
           </div>
 

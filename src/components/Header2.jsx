@@ -8,10 +8,6 @@ const Header = () => {
     textShadow:'3px 3px 3px 0 white',
   };
 
-
-  
-
-
   return (
     <div>
       <header className="navbar w-3/4 sm:w-full -mt-30 text-primary-content rounded-lg z-50 flex justify-between">
@@ -25,6 +21,7 @@ const Header = () => {
         <div className="flex justify-center gap-4 text-gray-300 text:lg sm:text-xl">
           <Link to='/about'><button className="ghost">About</button></Link>
           <Link to='/contact'><button className="ghost">Contact</button></Link>
+          <Link to='/search'><button className="ghost">Search</button></Link>
           <a>Locations</a>
           <a>Links</a>
         </div>

@@ -20,6 +20,7 @@ const Welcome = () => {
 <div className="ml-10 flex justify-start gap-4 text-gray-300">
           <Link to='/about'>About</Link>
           <Link to='/contact'>Contact</Link>
+          <Link to='/search'>Search</Link>
           <a>Locations</a>
           <a>Links</a>
         </div>
