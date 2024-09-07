@@ -16,7 +16,7 @@ const Pagina = () => {
   const [movieData, setMovieData] = useState([]);
   const [length, setlength] = useState("");
   const [actualPage, setActualPage] = useState(1);
-  const [movieList, setMovieList ]=useState('now_playing');
+  const [movieList, setMovieList] = useState("now_playing");
 
   console.log(length);
   console.log(actualPage);
@@ -69,7 +69,10 @@ const Pagina = () => {
   return (
     <div className="mt-10 ">
       <Header />
-    <MovieListButtons setMovieList={ setMovieList }/>
+      <MovieListButtons
+        setMovieList={setMovieList}
+        setActualPage={setActualPage}
+      />
       <div
         className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}
       >
