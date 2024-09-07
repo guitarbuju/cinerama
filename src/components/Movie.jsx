@@ -19,7 +19,7 @@ const Movie = ({ movie }) => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <img
-            className="sm:w-60 sm:h-70 rounded-xs"
+            className="sm:w-60 sm:h-70 rounded-lg"
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.original_title}
           />
