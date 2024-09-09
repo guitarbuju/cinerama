@@ -35,11 +35,11 @@ const Contact = () => {
 		<form  className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
 			<label className="block">
 				<span className="mb-1">Full name</span>
-				<input type="text" placeholder="Your Name" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800 b" />
+				<input type="text" placeholder="Your Name" className="h-10 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800 b" />
 			</label>
 			<label className="block">
 				<span className="mb-1">Email address</span>
-				<input type="email" placeholder="your email address" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" />
+				<input type="email" placeholder="your email address" className=" h-10 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" />
 			</label>
 			<label className="block">
 				<span className="mb-1">Message</span>
