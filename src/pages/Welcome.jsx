@@ -47,7 +47,7 @@ const Welcome = () => {
       >
         <div className="flex justify-center align-middle">
           <div className="flex flex-col gap-1 mt-8 sm:mt-0">
-         <Link to ='pag'>
+         <Link to ='/pag'>
               <button
                 className="bg-secondary w-20 rounded-md sm:w-40 h-8 btn-xs text-xs text-white ml-16 mt-14"
                 style={{ boxShadow: "1px 1px 1px black" }}
