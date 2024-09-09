@@ -22,15 +22,16 @@ const Header = ({ choose }) => {
 
   return (
     <div>
-      <header className= "-mt-10 flex-col navbar sm:w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between">
+      <header className= "flex-col navbar w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between">
         <div className="flex flex-col gap-1 sm:flex justify-center align-middle">
-          <div className="flex justify-center align-middle">
+         
+          <div className="flex justify-center gap-4 text-gray-300 sm:w-full">
+          <div className="hidden md:flex justify-center align-middle">
             <img src={camera} className="w-10 ml-5 mb-2" />
-            <Link to="/" className="btn btn-ghost normal-case text-xl">
+            <Link to="/" className="btn btn-ghost normal-case text-xl -mt-3">
               cinerama
             </Link>
           </div>
-          <div className="flex justify-center gap-4 text-gray-300 sm:w-full">
             <Link to="/about">
               <button className="ghost">About</button>
             </Link>
@@ -40,19 +41,13 @@ const Header = ({ choose }) => {
             <Link to="/search">
               <button className="ghost">Search</button>
             </Link>
-            <a>Locations</a>
+            <Link to="/pag">
+              <button className="ghost">Billboard</button>
+            </Link>
+           
           </div>
 
-          <Link to="/pag" className="btn btn-secondary btn-xs ">
-            <motion.button
-              initial="hidden"
-              animate="visible"
-              variants={blinkVariants}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              OUR BILLBOARD!!
-            </motion.button>
-          </Link>
+        
         </div>
         <div className="flex flex-col sm:flex-row">
           <h1 className="text-2xl sm:w-full" style={styles}>

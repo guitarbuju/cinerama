@@ -6,7 +6,7 @@ const MovieListButtons = ({ setMovieList, setActualPage }) => {
   return (
     <div className="flex justify-center align-middle gap-2 text-sm">
       <motion.button
-        className="btn btn-secondary btn-xs"
+        className="ghost text-gray-300 btn-xs"
         //   style={{ boxShadow: "0.5px 0.5px 0.5px rgb(245, 208, 254)" }}
         onClick={() => {
           setMovieList("now_playing");
@@ -16,11 +16,10 @@ const MovieListButtons = ({ setMovieList, setActualPage }) => {
           scale: 1.05,
           boxShadow: "2px 2x 2px -1px rgb(134, 25, 143)",
         }}
-      >
-        NOW PLAYING
+      >NOW PLAYING
       </motion.button>
       <motion.button
-        className="btn btn-secondary btn-xs"
+        className="ghost text-gray-300 btn-xs"
         //   style={{ boxShadow: "8px 4px 10px  rgba(0,0,0,0.8)" }}
         onClick={() => {
           setMovieList("popular");
@@ -34,7 +33,7 @@ const MovieListButtons = ({ setMovieList, setActualPage }) => {
         POPULAR
       </motion.button>
       <motion.button
-        className="btn btn-secondary btn-xs"
+        className="ghost text-gray-300 btn-xs"
         //   style={{ boxShadow: "8px 4px 10px  rgba(0,0,0,0.8)" }}
         onClick={() => {
           setMovieList("top_rated"), setActualPage(1);
@@ -47,7 +46,7 @@ const MovieListButtons = ({ setMovieList, setActualPage }) => {
         TOP RATED
       </motion.button>
       <motion.button
-        className="btn btn-secondary btn-xs"
+        className="ghost text-gray-300 btn-xs"
         //   style={{ boxShadow: "8px 4px 10px  rgba(0,0,0,0.8)" }}
         onClick={() => {
           setMovieList("upcoming");
@@ -58,7 +57,7 @@ const MovieListButtons = ({ setMovieList, setActualPage }) => {
           boxShadow: "2px 2x 2px -1px rgb(134, 25, 143)",
         }}
       >
-        UPCOMING
+       UPCOMING
       </motion.button>
     </div>
   );

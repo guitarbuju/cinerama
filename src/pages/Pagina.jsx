@@ -67,7 +67,7 @@ const Pagina = () => {
   console.log(selectedMovie);
 
   return (
-    <div className="mt-10 ">
+    <div className="-mt-10 ">
       <Header />
       <MovieListButtons
         setMovieList={setMovieList}
