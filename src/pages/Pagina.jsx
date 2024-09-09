@@ -11,6 +11,8 @@ import Header from "../components/Header";
 import styles from "./movie.module.css";
 import Pager from "../components/Pager";
 import MovieListButtons from "../components/MovieListButtons";
+import { TMDB_API_KEY , TMDB_URL_ENDPOINT } from "../lib/env_imports";
+
 
 const Pagina = () => {
   const [movieData, setMovieData] = useState([]);
@@ -43,9 +45,10 @@ const Pagina = () => {
   useEffect(() => {
     const cargarPeliculas = async () => {
       try {
-        const respuesta = await axios.get(
-          `https://api.themoviedb.org/3/movie/${movieList}?api_key=7c93a29133df64c786e0131de31c666c&language=esp-MX&page=${actualPage}`
-        );
+        const url= `${TMDB_URL_ENDPOINT}${movieList}?api_key=${TMDB_API_KEY}&language=esp-MX&page=${actualPage}`
+        // const url= `https://api.themoviedb.org/3/movie/${movieList}?api_key=7c93a29133df64c786e0131de31c666c&language=esp-MX&page=${actualPage}`
+
+        const respuesta = await axios.get(url);
         const results = respuesta.data.results;
         setlength(results.length);
         console.log(results);
