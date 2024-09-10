@@ -17,12 +17,12 @@ const Welcome = () => {
   return (
     <div className="flex-col items-center align-center">
 <header>
-<div className="ml-10 flex justify-start gap-4 text-gray-300">
+<div className=" flex justify-start gap-4 text-gray-300 w-full">
+          <Link to='/pag'>Now Playing</Link>
           <Link to='/about'>About</Link>
           <Link to='/contact'>Contact</Link>
           <Link to='/search'>Search</Link>
-          <a>Locations</a>
-          <a>Links</a>
+         
         </div>
 </header>
       <motion.div
@@ -45,33 +45,7 @@ const Welcome = () => {
           delay: 0.8,
         }}
       >
-        <div className="flex justify-center align-middle">
-          <div className="flex flex-col gap-1 mt-8 sm:mt-0">
-         <Link to ='/pag'>
-              <button
-                className="bg-secondary w-20 rounded-md sm:w-40 h-8 btn-xs text-xs text-white ml-16 mt-14"
-                style={{ boxShadow: "1px 1px 1px black" }}
-              >
-                NOW SHOWING!!
-              </button>
-           </Link>
-
-            <div className="flex ml-5 ">
-              <img src={camera} className="w-10 ml-5 mb-2" />
-              <h1
-                className="btn btn-ghost normal-case text-4xl"
-                style={{ color: "#e0d2fe " }}
-              >
-                cinerama
-              </h1>
-            </div>
-            <div className="flex ">
-              <h1 className="text-white text-xs -mt-2 ml-5">
-                3250 Old Greensboro Road, Apaloosa, AL 35905
-              </h1>
-            </div>
-          </div>
-        </div>
+       
       </motion.div>
     </div>
   );
