@@ -4,45 +4,21 @@ import camera from "../assets/icons8-video-64.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="px-4 py-8 text-gray-200">
+      <footer className="px-4 py-8 text-gray-200 mt-10">
         <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
           <div className="flex flex-row ">
             <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full"></div>
             <ul className="flex flex-wrap justify-center align-middle gap-4">
               <li className="flex mr-20">
-                <img src={camera} className="w-10 ml-5 mb-2 hidden sm:block" />
-                <Link to="/" className="btn btn-ghost normal-case text-xl hidden sm:block">
+                <img src={camera} className="w-20 ml-5 mb-2 hidden sm:block" />
+                <Link to="/" className="btn btn-ghost normal-case text-xl mt-8 hidden sm:block">
                   cinerama
                 </Link>
               </li>
-              <li className="hidden sm:block">
-                <Link to="/about" rel="noopener noreferrer">
-                  About
-                </Link>
-              </li>
-              <li className="hidden sm:block">
-                <Link to="contact" rel="noopener noreferrer" href="#">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <a className='sm:-ml-2 ml-20 hidden sm:block' rel="noopener noreferrer" href="#">
-                  Privacy
-                </a>
-              </li>
+             
             </ul>
           </div>
-          {/* <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
-			<li>
-				<a rel="noopener noreferrer" href="#">Instagram</a>
-			</li>
-			<li>
-				<a rel="noopener noreferrer" href="#">Facebook</a>
-			</li>
-			<li>
-				<a rel="noopener noreferrer" href="#">Twitter</a>
-			</li>
-		</ul> */}
+        
           <div className="flex flex-col justify-center pt-6 ">
             <div className="flex justify-center ">
               <a
