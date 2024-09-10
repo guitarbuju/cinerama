@@ -47,7 +47,7 @@ const Pagina = () => {
       try {
         const url= `${TMDB_URL_ENDPOINT}${movieList}?api_key=${TMDB_API_KEY}&language=esp-MX&page=${actualPage}`
         // const url= `https://api.themoviedb.org/3/movie/${movieList}?api_key=7c93a29133df64c786e0131de31c666c&language=esp-MX&page=${actualPage}`
-
+//joder
         const respuesta = await axios.get(url);
         const results = respuesta.data.results;
         setlength(results.length);
