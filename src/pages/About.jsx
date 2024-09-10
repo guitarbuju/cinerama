@@ -4,7 +4,7 @@ import styles from "./movie.module.css";
 
 const About = () => {
   return (
-    <div className="mt-10 max-w-sm">
+    <div className=" max-w-sm">
       <Header />
       <div >
         <div className={`hero-content w-3/4 flex-col sm:flex-row sm:ml-20 ${styles.movie}`}>

@@ -1,5 +1,5 @@
 import poster3 from "../assets/‎poster.png";
-import camera from "../assets/icons8-video-64.png";
+// import camera from "../assets/icons8-video-64.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect } from "react";

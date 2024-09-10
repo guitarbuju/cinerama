@@ -5,7 +5,7 @@ import Movie from "../components/Movie";
 import axios from "axios";
 import { useState } from "react";
 import styles from "./movie.module.css";
-
+import angeles from "../assets/LosAngeles.jpg"
 const Search = () => {
   const [movieSearch, setMovieSearch] = useState("");
   const [movieData, setMovieData] = useState([]);
@@ -28,7 +28,7 @@ const Search = () => {
   };
 
   return (
-    <div className="mt-10 ">
+    <div className=" ">
       <Header />
       <div className="flex flex-wrap justify-center gap-2 align-middle">
         <label className="input input-bordered flex items-center gap-2">
@@ -65,7 +65,12 @@ const Search = () => {
         </div>
         
       </div>
-
+      <div className="overflow-hidden mt-10">
+         <img src={angeles}
+          className=""
+        />
+      </div>
+       
       <div
         className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}
       >

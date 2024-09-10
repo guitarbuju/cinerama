@@ -22,7 +22,7 @@ const Header = ({ choose }) => {
 
   return (
     <div>
-      <header className= "flex-col navbar w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between">
+      <header className= "flex-col  w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between mt-12">
         <div className="flex flex-col gap-1 sm:flex justify-center align-middle">
          
           <div className="flex justify-center gap-4 text-gray-300 sm:w-full">
