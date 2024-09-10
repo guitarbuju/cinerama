@@ -5,10 +5,11 @@ import Movie from "../components/Movie";
 import axios from "axios";
 import { useState } from "react";
 import styles from "./movie.module.css";
-import angeles from "../assets/LosAngeles.jpg"
+import angeles from "../assets/LAcrop.001.png"
 const Search = () => {
   const [movieSearch, setMovieSearch] = useState("");
   const [movieData, setMovieData] = useState([]);
+  const [ image, setImage ]= useState(true)
 
   const url = `https://api.themoviedb.org/3/search/movie?api_key=7c93a29133df64c786e0131de31c666c&query=${movieSearch}&include_adult=false&language=en-US&page=1`;
 
@@ -17,6 +18,7 @@ const Search = () => {
       const fetchedMovie = await axios.get(url);
       const response = fetchedMovie.data; 
       setMovieData(response.results || response); 
+      setImage(false);
     } catch (error) {
       console.error("Error fetching movie:", error);
     }
@@ -65,11 +67,14 @@ const Search = () => {
         </div>
         
       </div>
-      <div className="overflow-hidden mt-10">
+      {image &&
+        <div className="flex justify-center align-middle mt-10">
          <img src={angeles}
-          className=""
+          // className="w-3/4"
         />
       </div>
+      }
+      
        
       <div
         className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}
