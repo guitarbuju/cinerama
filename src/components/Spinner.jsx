@@ -41,7 +41,7 @@ const Spinner = () => {
   return (
     <div className="flex justify-center items-center mt-4 mb-4 h-96 ml-50">
       <div
-        className="card w-96 shadow-xl"
+        className="card w-80 shadow-xl sm:w-96"
         style={{
           backgroundImage: "linear-gradient(315deg, #7a7adb 0%, #170e13 74%)",
         }}
@@ -59,13 +59,13 @@ const Spinner = () => {
               <span className="loading loading-spinner loading-lg bg-yellow-400"></span>
             ) : (
               <div>
-                <h2 className="card-title text-white mb-2">
+                <h2 className="card-title text-white mb-2 text-sm sm:text-xl">
                   ¡¡THANK YOU FOR YOUR PURCHASE!!
                 </h2>
                 <div className="card-actions justify-center">
                   <Link to="/">
                     <button
-                      className="btn btn-wide btn-secondary"
+                      className="btn sm:btn-wide btn-secondary"
                       onClick={handleReset}
                     >
                       Home
