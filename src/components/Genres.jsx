@@ -1,7 +1,11 @@
 
 
 /* eslint-disable react/prop-types */
-const Genres = ({genres}) => {
+const Genres = ({movie}) => {
+
+const genres = movie.genre_ids;
+console.log(genres);
+
     const genreArray = [
         'Action','Adventure','Animation','Comedy','Crime','Documentary','Drama','Family','Fantasy','History','Horror','Music','Mistery','Romance','Sci-Fi','TvMovie','Thriller','War','Western' ];
        

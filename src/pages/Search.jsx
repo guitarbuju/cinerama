@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import SelectMovieButton from "../components/SelectMovieButton";
 import Header from "../components/Header";
 import Movie from "../components/Movie";
 import axios from "axios";
 import { useState } from "react";
 import styles from "./movie.module.css";
 import angeles from "../assets/LAcrop.001.png"
+import Genres from "../components/Genres";
 const Search = () => {
   const [movieSearch, setMovieSearch] = useState("");
   const [movieData, setMovieData] = useState([]);
@@ -90,10 +90,8 @@ const Search = () => {
             }}
           >
             <Movie movie={movie} />
-
-            <div className="mb-8 h-10">
-              <SelectMovieButton movie={movie} />
-            </div>
+            <Genres movie ={ movie }/>
+           
           </motion.div>
         ))}
       </div>
