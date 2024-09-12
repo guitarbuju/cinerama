@@ -21,32 +21,13 @@ const Pagina = () => {
   const [actualPage, setActualPage] = useState(1);
   const [movieList, setMovieList] = useState("now_playing");
 
-  console.log(length);
-  console.log(actualPage);
-
-  const nextPage = () => {
-    if (actualPage >= 1 && actualPage <= length) {
-      setActualPage(actualPage + 1);
-    }
-    if (actualPage < 1) {
-      setActualPage(1);
-    }
-  };
-  const prevPage = () => {
-    if (actualPage > 1 && actualPage <= length) {
-      setActualPage(actualPage - 1);
-    }
-    if (actualPage < 1) {
-      setActualPage(1);
-    }
-  };
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const cargarPeliculas = async () => {
       try {
-        const url = `${TMDB_URL_ENDPOINT}${movieList}?api_key=${TMDB_API_KEY}&language=esp-MX&page=${actualPage}`;
+        const url = `${TMDB_URL_ENDPOINT}/movie/${movieList}?api_key=${TMDB_API_KEY}&language=esp-MX&page=${actualPage}`;
         //const url= `https://api.themoviedb.org/3/movie/${movieList}?api_key=7c93a29133df64c786e0131de31c666c&language=esp-MX&page=${actualPage}`
 
         const respuesta = await axios.get(url);
@@ -108,8 +89,6 @@ const Pagina = () => {
       <Pager
         actualPage={actualPage}
         setActualPage={setActualPage}
-        prevPage={prevPage}
-        nextPage={nextPage}
         length={length}
       />
     </div>
