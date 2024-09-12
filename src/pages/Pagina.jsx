@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useMovieContext } from "../../Context"
+import { useMovieContext } from "../../Context";
 import Movie from "../components/Movie";
 import SelectMovieButton from "../components/SelectMovieButton";
 import { motion } from "framer-motion";
@@ -14,12 +14,9 @@ import Times from "../components/Times";
 import useMovieList from "../hooks/useMovieList";
 
 const Pagina = () => {
- 
-
   const navigate = useNavigate();
-  
-  const {movieData, length, setMovieList, actualPage, setActualPage} = useMovieList();
-
+  const { movieData, length, setMovieList, actualPage, setActualPage } =
+    useMovieList();
   const { setSelectedMovie, selectedMovie } = useMovieContext();
 
   const handleGetTicketsClick = (movie) => {
@@ -50,7 +47,7 @@ const Pagina = () => {
           >
             <Movie movie={movie} />
             <div className="flex flex-col ">
-              <Genres movie={movie}/>
+              <Genres movie={movie} />
               <Times />
             </div>
 
