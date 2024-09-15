@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import watch from "../assets/watch.png";
-import Genres from "./Genres";
-import ticket from "../assets/icons8-ticket-48.png";
+
+
 import { motion } from "framer-motion";
+
 
 const Movie = ({ movie }) => {
   return (
@@ -32,27 +32,6 @@ const Movie = ({ movie }) => {
             <p className=" text-white text-sm text-left p-3 w-80  h-40 sm:w-44 md:w-52 lg:w-60 sm:text-xs justify-center align-middle antialiased ">
               {movie.overview}
             </p>
-          </div>
-
-          <div className="flex flex-col ">
-            <Genres genres={movie.genre_ids} className="text-xs"/>
-            <div className="w-68 flex justify-center align-middle ">
-              {" "}
-              <div className="flex justify-center align-middle sm:flex-col gap-1 ">
-                <img src={watch} style={{ width: "35px", opacity: 0.8 }} />
-                <div className="flex">
-                  <img src={ticket} className="w-5" />
-                  <span className="text-white text-xs">10$</span>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 sm:flex">
-                <span className="badge badge-secondary text-xs">15-17</span>
-                <span className="badge badge-secondary text-xs">17-19</span>
-                <span className="badge badge-secondary text-xs">19-21</span>
-                <span className="badge badge-secondary text-xs">21-23</span>
-              </div>
-                
-            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 
 import { motion } from "framer-motion";
+import { pageSelector } from "../lib/pageSelector";
 
-const Pager = ({ nextPage, prevPage, length, setActualPage, actualPage }) => {
+const {nextPage, prevPage}=pageSelector();
+
+const Pager = ({  length, setActualPage, actualPage }) => {
   const buttons = Array.from({ length: length });
 
   const scrollToTop = () => {
