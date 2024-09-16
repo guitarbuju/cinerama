@@ -48,7 +48,7 @@ const Genres = ({ movie }) => {
           </span>
         ))
       ) : (
-        <span className="p-2 ">No genres available</span>  
+        <span className="p-2 flex justify-center">No genres available</span>  
       )}
     </div>
   );
