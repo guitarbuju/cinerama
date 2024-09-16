@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Genres = ({ movie }) => {
   const genres = movie.genre_ids || [];
-  console.log(genres);
+
 
   const genreArray = [
     "Action",
@@ -38,7 +38,7 @@ const Genres = ({ movie }) => {
   }
 
   return (
-    <div className="max-w-sm text-warning font-sans text-xs grid grid-cols-3 grid-row-2 mt-1 mb-1">
+    <div className="max-w-sm text-warning font-sans text-xs grid grid-cols-3 grid-row-2 mt-1 mb-1 ">
      
       {genres.length > 0 ? (
         genres.map((id, index) => (

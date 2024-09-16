@@ -2,6 +2,7 @@
 
 
 import { motion } from "framer-motion";
+import not_available from '../assets/not available.jpg'
 
 
 const Movie = ({ movie }) => {
@@ -9,7 +10,7 @@ const Movie = ({ movie }) => {
     <div>
       <div
         key={movie.id}
-        className="flex-col justify-center items-center sm:flex-row sm:justify-center sm:align-middle rounded-lg p-4"
+        className="flex-col justify-center items-center sm:flex-row sm:justify-center sm:align-middle rounded-lg p-4 bg-stone-900"
       >
         <motion.div
           className="rounded flex justify-center"
@@ -20,7 +21,7 @@ const Movie = ({ movie }) => {
         >
           <img
             className="w-60 h-70 md:w-60 md:h-70 rounded-lg"
-            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            src={movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`: not_available}
             alt={movie.original_title}
           />
         </motion.div>
