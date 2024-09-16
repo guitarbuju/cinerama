@@ -1,0 +1,4 @@
+
+https://api.themoviedb.org/3/search/movie?api_key=7c93a29133df64c786e0131de31c666c&query=star+wars&include_adult=false&language=en-US&page=1
+ const url = `${TMDB_URL_ENDPOINT}/movie/${movieList}?api_key=${TMDB_API_KEY}&language=esp-MX&page=${actualPage}`;
+        const url= `https://api.themoviedb.org/3/movie/${movieList}?api_key=7c93a29133df64c786e0131de31c666c&language=esp-MX&page=${actualPage}`
