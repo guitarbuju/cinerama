@@ -8,7 +8,7 @@ import useMovieSearch from "../hooks/useMovieSearch";
 import InputSearch from "../components/InputSearch";
 const Search = () => {
   const findMovie = useMovieSearch();
-
+  console.log(findMovie.movieData);
   return (
     <div className=" ">
       <Header />
@@ -24,12 +24,12 @@ const Search = () => {
       )}
 
       <div
-        className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}
+        className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10  ${styles.movie}`}
       >
         {findMovie.movieData.map((movie, index) => (
           <motion.div
             key={index}
-            className="rounded-lg"
+            className="rounded-lg bg-stone-900"
             style={{ boxShadow: "8px 4px 10px  rgba(0,0,0,0.8)" }}
             whileHover={{
               scale: 1.05,
@@ -37,7 +37,7 @@ const Search = () => {
             }}
           >
             <Movie movie={movie} />
-            <Genres movie={movie} />
+            <Genres movie={movie} className="pb-4" />
           </motion.div>
         ))}
       </div>

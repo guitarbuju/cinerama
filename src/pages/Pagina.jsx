@@ -38,7 +38,7 @@ const Pagina = () => {
         {movieData.map((movie, index) => (
           <motion.div
             key={index}
-            className="rounded-lg"
+            className="rounded-lg bg-stone-900"
             style={{ boxShadow: "8px 4px 10px  rgba(0,0,0,0.8)" }}
             whileHover={{
               scale: 1.05,
@@ -46,7 +46,7 @@ const Pagina = () => {
             }}
           >
             <Movie movie={movie} />
-            <div className="flex flex-col ">
+            <div className="flex flex-col">
               <Genres movie={movie} />
               <Times />
             </div>
