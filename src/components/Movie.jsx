@@ -30,7 +30,7 @@ const Movie = ({ movie }) => {
             {movie.title}
           </h1>
           <div className="overflow-hidden -mt-4 justify-center align-middle">
-            <p className=" text-white text-sm text-left p-3 w-80  h-40 sm:w-44 md:w-52 lg:w-60 sm:text-xs justify-center align-middle antialiased ">
+            <p className=" text-white text-sm text-left p-3 w-80  h-20 sm:w-44 md:w-52 lg:w-60 sm:text-xs justify-center align-middle antialiased ">
               {movie.overview}
             </p>
           </div>
