@@ -1,17 +1,27 @@
 import poster3 from "../assets/‎poster.png";
-// import camera from "../assets/icons8-video-64.png";
+import verticalPoster from '../assets/verticalBanner.png'
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Welcome = () => {
+
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     document.body.classList.add("page-background");
-
-   
     return () => {
       document.body.classList.remove("page-background");
     };
+  }, []);
+ 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth >= 667); 
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -33,7 +43,7 @@ const Welcome = () => {
           duration: 2,
         }}
       >
-        <img src={poster3} />
+        {isMobile ?<img src={poster3} /> : <img src={verticalPoster}/>}
       </motion.div>
 
       <motion.div
