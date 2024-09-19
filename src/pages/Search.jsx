@@ -10,7 +10,7 @@ const Search = () => {
   const findMovie = useMovieSearch();
   console.log(findMovie.movieData);
   return (
-    <div className=" ">
+    <div className="-mt-4 ">
       <Header />
       <InputSearch findMovie={findMovie} />
 

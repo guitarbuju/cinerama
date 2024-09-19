@@ -3,8 +3,17 @@
 import { motion } from "framer-motion";
 
 const MovieListButtons = ({ setMovieList, setActualPage }) => {
+  const styles = {
+    fontFamily: "Kaushan Script",
+  };
+
   return (
-    <div className="flex justify-center align-middle gap-2 text-sm">
+    
+    <div className="flex flex-col  gap-2 text-sm ">
+     <h1 className="text-2xl sm:w-full text-purple-400" style={styles}>
+            Welcome Back to the Movies...
+          </h1>
+     <div className="flex justify-center align-middle">
       <motion.button
         className="ghost text-gray-300 btn-xs"
         //   style={{ boxShadow: "0.5px 0.5px 0.5px rgb(245, 208, 254)" }}
@@ -59,6 +68,7 @@ const MovieListButtons = ({ setMovieList, setActualPage }) => {
       >
        UPCOMING
       </motion.button>
+      </div>
     </div>
   );
 };

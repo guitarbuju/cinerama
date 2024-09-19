@@ -30,10 +30,10 @@ const Movie = ({ movie }) => {
             alt={movie.original_title}
           />
         </motion.div>
-        <div className="sm:flex sm:flex-col p-2 justify-center items-center mt-2">
+        <div className="sm:flex sm:flex-col justify-center items-center mt-2">
           
-          <div className="overflow-hidden -mt-4 justify-center align-middle">
-            <p className=" text-white text-sm text-left p-3 w-80  h-20 sm:w-44 md:w-52 lg:w-60 sm:text-xs justify-center align-middle antialiased ">
+          <div className="overflow-hidden -mt-4 justify-center align-middle p-1">
+            <p className=" text-white text-xs text-left w-full  h-20  mt-4 justify-center align-middle antialiased p-2">
               {movie.overview}
             </p>
           </div>

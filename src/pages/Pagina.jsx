@@ -26,14 +26,14 @@ const Pagina = () => {
   console.log(selectedMovie);
 
   return (
-    <div className=" ">
+    <div className="-mt-8 ">
       <Header />
       <MovieListButtons
         setMovieList={setMovieList}
         setActualPage={setActualPage}
       />
       <div
-        className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}
+        className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4  p-2 ${styles.movie}`}
       >
         {movieData.map((movie, index) => (
           <motion.div
@@ -41,7 +41,7 @@ const Pagina = () => {
             className="rounded-lg bg-stone-900"
             style={{ boxShadow: "8px 4px 10px  rgba(0,0,0,0.8)" }}
             whileHover={{
-              scale: 1.05,
+              // scale: 1.05,
               boxShadow: "17px 8px 20px -4px rgba(0,0,0,0.8)",
             }}
           >
