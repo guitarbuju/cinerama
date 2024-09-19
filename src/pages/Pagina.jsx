@@ -33,7 +33,7 @@ const Pagina = () => {
         setActualPage={setActualPage}
       />
       <div
-        className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 ${styles.movie}`}
+        className={`sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10 p-2 ${styles.movie}`}
       >
         {movieData.map((movie, index) => (
           <motion.div

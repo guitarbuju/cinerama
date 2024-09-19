@@ -38,7 +38,7 @@ const Genres = ({ movie }) => {
   }
 
   return (
-    <div className="max-w-sm text-warning font-sans text-xs grid grid-cols-3 grid-row-2 mt-1 mb-1 ">
+    <div className="max-w-sm text-warning font-sans text-xs flex justify-center align-middle flex-wrap ">
      
       {genres.length > 0 ? (
         genres.map((id, index) => (
