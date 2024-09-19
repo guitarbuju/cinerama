@@ -4,9 +4,6 @@ import camera from "../assets/icons8-video-64.png";
 import { motion } from "framer-motion";
 
 const Header = ({ choose }) => {
-  const styles = {
-    fontFamily: "Kaushan Script",
-  };
   const styles2 = {
     fontFamily: "Kaushan Script",
     color: "white",
@@ -20,34 +17,31 @@ const Header = ({ choose }) => {
 
   return (
     <div>
-      <header className="flex-col  w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between mt-12">
+      <header className="flex-col  w-full text-primary-content rounded-lg z-50 sm:flex sm:justify-between mt-10">
         <div className="flex flex-col gap-1 sm:flex justify-center align-middle">
-          <div className="flex justify-center gap-4 text-gray-300 sm:w-full">
-            <div className="hidden md:flex justify-center align-middle">
-              <img src={camera} className="w-10 ml-5 mb-2" />
-              <Link to="/" className="btn btn-ghost normal-case text-xl -mt-3">
-                cinerama
+          <div className="flex justify-center align-middle gap-4 text-gray-300 sm:w-full">
+            <div className="flex justify-center align-middle">
+            <Link to="/">
+              <img src={camera} className="w-8 h-8  " />
               </Link>
             </div>
-            <Link to="/pag">
-              <button className="ghost">Billboard</button>
-            </Link>
-            <Link to="/about">
-              <button className="ghost">About</button>
-            </Link>
-            <Link to="/contact">
-              <button className="ghost">Contact</button>
-            </Link>
-            <Link to="/search">
-              <button className="ghost">Search</button>
-            </Link>
+            <div  className="flex justify-center align-middle gap-4 text-gray-300 sm:w-[300px] mt-1">
+              <Link to="/pag">
+                <button className="ghost">Billboard</button>
+              </Link>
+              <Link to="/about">
+                <button className="ghost">About</button>
+              </Link>
+              <Link to="/contact">
+                <button className="ghost">Contact</button>
+              </Link>
+              <Link to="/search">
+                <button className="ghost">Search</button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="flex flex-col sm:flex-row">
-          <h1 className="text-2xl sm:w-full" style={styles}>
-            Welcome Back to the Movies...
-          </h1>
-
           {choose && (
             <motion.h5
               style={styles2}
